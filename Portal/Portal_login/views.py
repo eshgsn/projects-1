@@ -7,11 +7,22 @@ from django.http import HttpResponse
 def home(request):
     return render(request,'Home.html')
 
-def getUserLogin(request):
+
+
+def getUserLogin(request) :
     if request.method == 'POST':
-        print("Working Properly")
+        print("Post Method Working Properly")
         username = request.POST['username']
         password = request.POST['password']
-        return HttpResponse("<h1>Working</h1>" + username + " " + password)
+        if login(username,password) == True:
+            return render(request,'StudentLoginForm.html')
     print("Something Went Wrong")
     return render(request,'Home.html')
+
+
+
+def login(username,password):
+    if username != "" and password != "":
+        return True
+    else:
+        return False
