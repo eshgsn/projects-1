@@ -12,24 +12,25 @@
         <label>Site Portal</label>
         <div>
             <ul>
-                <li>Home</li>
-                <li>Collage Site</li>
-                <li>About us</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="geu.ac.in">Collage Site</a></li>
+                <li><a href="#">About us</a></li>
             </ul>
         </div>
     </div>
     <div id="form-div">
         <form method="post" action="getUserLogin">
+            {% csrf_token %}
             <header style="font-size: 30px; font-weight: bold;">Student Login</header>
             <div class="input-div">
                 <label>Student Id:</label>
                 <br>
-                <input type="text" placeholder="Student Id" class="input-area"/>
+                <input type="text" placeholder="Student Id" name="username" class="input-area"/>
             </div>
             <div class="input-div">
                 <label>Password:</label>
                 <br>
-                <input type="password" placeholder="Password" class="input-area"/>
+                <input type="password" placeholder="Password" name="password" class="input-area"/>
             </div>
             <input type="submit" id="login-btn" name="Login" value="Login"/>
         </form>
