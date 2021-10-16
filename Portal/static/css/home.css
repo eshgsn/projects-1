@@ -2,78 +2,89 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #nav-bar{
-    font-size: 25px;
-    background-color: #000000;
-    color: aliceblue;
-    padding: 10px;
-    width: 100%;
+    background-color: orange;
     display: inline-flex;
-    /* #0f1249 */
+    width: 100%;
+    padding: 1%;
 }
 #nav-bar label{
-    margin: 15px;
-    font-size: 28px;
+    font-size: 30px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #nav-bar ul{
-    width: 50%;
-    display: inline-flex;
     position: absolute;
     left: 60%;
-    margin: 10px;
-    font-size: 20px;
+    width: 60%;
+    padding: 0.5%;
+}
+#nav-bar li{
+    display: inline-flex;
     list-style: none;
-    text-align: center;
-}
-#nav-bar ul li{
     width: 20%;
-    margin: 5px;
-    text-align: center;
+}
+#nav-bar li a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
     text-decoration: none;
+    color: black;
 }
-#nav-bar ul li a{
-    text-decoration: none;
-    color: aliceblue;
+#nav-bar li a:hover{
+    color: white;
 }
-#nav-bar ul li a:hover{
-    color: #0099ff;
-    cursor: pointer;
-}
+
 
 #form-div{
-    margin: 15px;
-    width: 30vw;
-    height: 55vh;
-    background-color: rgb(78, 78, 78);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 9px 7px 7px black;
 }
-#form-div form{
-    text-align: center;
-    padding: 20px;
-    font-size: 22px;
+.form-header{
+    font-size: 30px;
+    margin-top: 4%;
+    margin-left: 4%;
 }
-
-.input-div{
-    margin:10px;
-    padding: 10px;
+.discription-para{
+    margin-left: 4%;
+    margin-top: 1%;
+    font-size: 14px;
+}
+.form-items{
+    margin-top: 2%;
+    margin-left: 4%;
 }
 .input-area{
-    font-size: 20px;
-    margin: 10px;
-    border-radius: 10px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    font-size: 16px;
+    width: 20vw;
     padding: 5px;
 }
-#login-btn{
-    font-size: 22px;
-    padding: 10px;
-    width: 20vh;
-    border-radius: 20px;
-    color: white;
-    background-color: #000000;
+.forget-id-pass{
+    margin-left: 4%;
+    font-size: 14px;
+    text-decoration: none;
 }
-#login-btn:hover{
-    color:black;
-    background-color: #FFF;
+
+#login-btn{
+    margin-top: 6%;
+    position: relative;
+    left: 45%;
+    color: white;
+    background-color: blueviolet;
+    font-size: 22px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
 }

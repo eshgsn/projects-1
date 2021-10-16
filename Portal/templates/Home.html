@@ -1,40 +1,40 @@
-<!DOCTYPE html>
+{% load static %}
+<!--<!DOCTYPE html>-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}?{% now 'U' %}">
+<!--    <link rel="stylesheet" href="../static/css/home.css">-->
     <title>Document</title>
 </head>
 <body>
-    <div id="nav-bar">
-        <label>Site Portal</label>
-        <div>
+    <div style="background: whitesmoke; width: 100vw; height: 100vh;">
+        <div id="nav-bar">
+            <label>Student Portal</label>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="geu.ac.in">Collage Site</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="StudentForm">Registration</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="StudentForm">Register</a></li>
+                <!-- <li><a href="StudentForm">Registration</a></li> -->
             </ul>
         </div>
-    </div>
-    <div id="form-div">
-        <form method="post" action="getUserLogin">
-            {% csrf_token %}
-            <header style="font-size: 30px; font-weight: bold;">Student Login</header>
-            <div class="input-div">
-                <label>Student Id:</label>
+        <div id="form-div">
+            <form method="post" action="getUserLogin">
+                 {% csrf_token %}
+                <header class="form-header">Login</header>
+                <p class="discription-para">Student Login Portal for graphic era university</p>
+                <div class="form-items">
+                    <input type="text" placeholder="Student Id" name="username" class="input-area" required="true"/>  
+                    <br>         
+                    <input type="password" placeholder="Password" name="password" class="input-area" required="true"/>
+                </div>
+                <a class="forget-id-pass" href="#">Forget Id and Password</a>
                 <br>
-                <input type="text" placeholder="Student Id" name="username" class="input-area" />
-            </div>
-            <div class="input-div">
-                <label>Password:</label>
-                <br>
-                <input type="password" placeholder="Password" name="password" class="input-area"/>
-            </div>
-            <input type="submit" id="login-btn" name="Login" value="Login"/>
-        </form>
+                <input type="submit" id="login-btn" name="Login" value="Login"/>
+            </form>
+        </div>
     </div>
 </body>
 </html>
