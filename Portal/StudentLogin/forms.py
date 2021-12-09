@@ -7,17 +7,17 @@ class StudentRegistrationForm(forms.ModelForm):
         model = StudentRegistration
         fields = '__all__'
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control', 'required': 'True'}),
-            'studentId': forms.TextInput(attrs={'class': 'form-control', 'required': 'True'}),
-            'password': forms.PasswordInput(attrs={'class': 'form-control', 'required': 'True'}),
-            'gender' : forms.Select(attrs={'class': 'form-control', 'required': 'True'}),
-            'date_of_birth': forms.DateInput(attrs={'class': 'form-control', 'required': 'True', 'type':'date'}),
-            'phone_number': forms.NumberInput(attrs={'class': 'form-control', 'required': 'True'}),
-            'email': forms.EmailInput(attrs={'class': 'form-control', 'required': 'True'}),
-            'course': forms.TextInput(attrs={'class': 'form-control', 'required': 'True'}),
-            'semester': forms.Select(attrs={'class': 'form-control', 'required': 'True'}),
-            'yearOfAdmission': forms.DateInput(attrs={'class': 'form-control', 'required':'True', 'type':'date'}),
-            'yearOfPassout': forms.DateInput(attrs={'class': 'form-control', 'required': 'True', 'type':'date'}),
+            'name': forms.TextInput(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
+            'studentId': forms.TextInput(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
+            'password': forms.PasswordInput(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
+            'gender' : forms.Select(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
+            'date_of_birth': forms.DateInput(attrs={'class': 'form-control', 'required': 'True', 'type':'date','autocomplete':"off"}),
+            'phone_number': forms.NumberInput(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
+            'email': forms.EmailInput(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
+            'course': forms.TextInput(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
+            'semester': forms.Select(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
+            'yearOfAdmission': forms.DateInput(attrs={'class': 'form-control', 'required':'True', 'type':'date','autocomplete':"off"}),
+            'yearOfPassout': forms.DateInput(attrs={'class': 'form-control', 'required': 'True', 'type':'date','autocomplete':"off"}),
         }
         labels = {
             'name': 'Student Name:',

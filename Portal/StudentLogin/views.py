@@ -1,28 +1,10 @@
 from django.shortcuts import render
 from .forms import StudentRegistrationForm
 from django.http import HttpResponseRedirect
-
+from .models import StudentRegistration
 
 def home(request):
     return render(request, 'Home.html')
-
-
-def getUserLogin(request):
-    if request.method == 'POST':
-        print("Post Method Working Properly")
-        username = request.POST['username']
-        password = request.POST['password']
-        if login(username, password):
-            return render(request, 'StudentLoginForm.html')
-    print("Something Went Wrong")
-    return HttpResponseRedirect('/')
-
-
-def login(username, password):
-    if username != "" and password != "":
-        return True
-    else:
-        return False
 
 
 def StudentForm(request):
