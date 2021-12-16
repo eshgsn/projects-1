@@ -1,24 +1,26 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render
-from .forms import StudentRegistrationForm
 from django.http import HttpResponseRedirect
+from .forms import StudentRegistrationForm
 from .models import StudentRegistration
 
-def home(request):
-    return render(request, 'Home.html')
-
-
-def StudentForm(request):
-    makeform = StudentRegistrationForm()
-    return render(request, 'StudentLoginForm.html', {'form': makeform})
-
-
-def StudentLoginFormSubmit(request):
-    makeform = StudentRegistrationForm()
+def getUserLogin(request) -> (HttpResponseRedirect or HttpResponse):
     if request.method == 'POST':
-        forms = StudentRegistrationForm(request.POST)
+        print("Post Method Working Properly")
+        username = request.POST['username']
+        password = request.POST['password']
+        formStd = StudentProjectForm()
+        if login(username, password):
+            return render(request, 'ProjectSelection.html',{'form': formStd})
+    print("Something Went Wrong")
+    return HttpResponseRedirect('/')
 
-        if forms.is_valid():
-            forms.save()
-            print("Data Values are Saved")
-        return render(request, 'Home.html')
-    return render(request, 'StudentLoginForm.html', {'form', makeform})
+
+def login(username, password) -> bool:
+    db_object = StudentRegistration.objects.all()
+    print(db_object)
+    return True
+
+def studentProjectOptions(request) -> HttpResponse:
+    stdForm = StudentProjectForm()
+    return render(request,'ProjectSelection.html',stdForm)

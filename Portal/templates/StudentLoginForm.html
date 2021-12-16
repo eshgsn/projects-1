@@ -13,7 +13,8 @@
 </head>
 <body>
     <div id="nav-bar">
-        <label>Site Portal</label>
+        <img style="width: 45px; height: 45px; margin-right: 20px; border-radius: 50%;" src="../static/images/geuImage.jpeg" alt="something went wrong"/>
+        <label>Student Project Allocation System</label>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="geu.ac.in">About us</a></li>
@@ -25,7 +26,7 @@
             {% csrf_token %}
             <header style="font-size: 30px; font-weight: bold;">Student Login</header>
             {{ form }}
-            <input type="submit" style="margin:50px" id="login-btn" name="Login" value="Login"/>
+            <input type="submit" style="margin:50px" id="login-btn" name="Login" value="Register"/>
         </form>
     </div>
 </body>

@@ -1,10 +1,8 @@
-from django.conf.urls import include
 from . import views
-from django.urls import path,include
+from django.urls import path
+
 
 urlpatterns = [
-    path('', views.home,name='home'),
-    path('StudentForm',views.StudentForm,name='StudentForm'), #File Path
-    path('StudentLoginFormSubmit',views.StudentLoginFormSubmit,name='StudentLoginFormSubmit'), #action Function
-    path('',include('StudentProjectData.urls')) #module include path
+    path('getUserLogin',views.getUserLogin,name='getUserActivity'),
+    path('selectProject', views.studentProjectOptions,name='home'),
 ]
