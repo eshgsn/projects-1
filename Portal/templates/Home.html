@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/home.css' %}?{% now 'U' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!--    <link rel="stylesheet" href="../static/css/home.css">-->
     <title>Document</title>
 </head>
@@ -15,9 +19,10 @@
             <label style="margin-top: 5px;">Student Project Allocation System</label>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="about">About Us</a></li>
                 <li><a href="StudentForm">Register</a></li>
             </ul>
+            
         </div>
         <div id="form-div">
             <form method="post" action="getUserLogin">
@@ -29,6 +34,13 @@
                     <br>         
                     <input type="password" placeholder="Password" name="password" class="input-area" required="true"/>
                 </div>
+                {% if messages != "Successfully Login"%}
+                    <ul class="messages">
+                    {% for message in messages %}
+                        <li style="color: red; position: relative; left: 20%; margin-bottom: 5px;" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
                 <a class="forget-id-pass" href="#">Forget Id and Password</a>
                 <br>
                 <input type="submit" id="login-btn" name="Login" value="Login"/>
@@ -36,5 +48,40 @@
             <!-- <img id="logo" src="../static/images/geuImage.jpeg" alt="something went wrong"/> -->
         </div>
     </div>
+    <footer class="page-footer font-small stylish-color-dark pt-4" style="background-color:  #4b4a49; color: #fff;">
+        <footer class="page-footer font-small mdb-color lighten-3 pt-4" >
+            <div class="container text-center text-md-left"style="background-color:  #4b4a49; color:#fff ">
+                <div class="row">
+                <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+                  <h5 class="font-weight-bold text-uppercase mb-4">Graphic Era </h5>
+                  <p>Established vide Act No 12 of 2011 of Uttarakhand State Legislature
+                     University under Section 2(f) of the UGC Act, 1956 set up under the aegis of Graphic Era Educational Society, Dehradun.</p>
+                  </div>
+                <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+                  <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+                  <ul class="list-unstyled">
+                    <li>
+                      <p>
+                        <i class="fas fa-home mr-3"></i> Dehradun,Uttrakhand,India</p>
+                    </li>
+                    <li>
+                      <p>
+                        <i class="fas fa-envelope mr-3"></i> gehu@gmail.com</p>
+                    </li>
+                    <li>
+                      <p>
+                        <i class="fas fa-phone mr-3"></i>18008906027</p>
+                    </li>
+                    <li>
+                      <p>
+                        <i class="fas fa-print mr-3"></i>7500013334</p>
+                    </li>
+                  </ul>
+                </div>
+        </footer>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://www.gehu.ac.in/"> Graphic Era Hill University(GEHU)</a>
+        </div>
+    </footer>
 </body>
 </html>

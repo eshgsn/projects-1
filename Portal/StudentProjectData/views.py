@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from .forms import StudentRegistrationForm
+from StudentLogin.forms import StudentRegistrationForm
 from django.http import HttpResponseRedirect
 
 def home(request):
     return render(request, 'Home.html')
+
+def about(request):
+    return render(request,'about.html')
 
 
 def StudentForm(request):

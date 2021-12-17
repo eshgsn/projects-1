@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    
+        body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}   
+    * {
+      box-sizing: border-box;
+    }
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+    * {
+  box-sizing: border-box;
+}
+/* Style the top navigation bar */
+.topnav {
+  width: 99.5%;
+  background-color: black;
+  overflow: auto;
+}
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 16.66%; /* Four links of equal widths */
+  text-align: center;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #c83737;
+  color: black;
+}
+.topnav a.active {
+    background-color: #b30000;
+}
+body
+{
+    margin:0;
+    padding:0;
+    font-weight: century Gothic;
+    background-color: pink;
+    background: url('../static/images/Graphic-Era-University.webp') fixed ;
+    width:100vw;height:100vh;
+    background-size:cover;
+    background-position:center;
+}
+.container
+{
+    height:75vh;
+    width:60%;
+    background:rgba(0,0,0,.8);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:0px 10px;
+}
+.img{
+    height:70px;
+    width:70px;
+    background: url("../static/images/geuImage.jpeg") no-repeat;
+    background-size:cover;
+    background-position:center;
+    border-radius:50px;
+    position:absolute;
+    top:6%;
+    left:50%;
+    
+    transform:translate(-50%,-50%);
+}
+.container h1{
+    color:white;
+    margin-top:50px;
+}
+.container p{
+    color:white;
+    margin-top:60px;
+    font-size:large;
+}
+    </style>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}?{% now 'U' %}">
+    <body>
+        <div id="nav-bar">
+            <img style="width: 45px; height: 45px; margin-right: 20px; border-radius: 50%;" src="../static/images/geuImage.jpeg" alt="something went wrong"/>
+            <label style="margin-top: 5px;">Student Project Allocation System</label>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="StudentForm">Register</a></li>
+            </ul>
+            
+        </div>
+<div class="container">
+    <center>
+        <br>
+        <h1>ABOUT US</h1>
+            <div class="img"></div>
+        <p>In 1993 a young man with just twenty nine thousand and loads of determination embarked on a mission to transform the higher education landscape of the Doon valley. Graphic Era Deemed to be University is the culmination of the vision of its founder, Prof (Dr) Kamal Ghanshala, who had the dream to change the destiny of thousands of youth, through quality and holistic education and his vision took a concrete shape in the form of Graphic Era Institute in 1996.</p>
+        <p>Prof. (Dr.) Kamal Ghanshala</p>
+        <p>The Founder of the Graphic Era Group and the President of Graphic Era (Deemed to be University) ; He is an engineer with Bachelor's and Master's degree in Computer Science and Engineering. He also holds a Ph.D. in Computer Science and Engineering. GEU is a fructification of his cherished dream. He has a rich teaching experience, and is, inarguably, one of the leading experts in the teaching of Computer Aided Design (CAD) and ‘C’ language in the country.</p>
+    </center>
+</div>
+
+     
+  
+    </body>
+    </html> 
+    
