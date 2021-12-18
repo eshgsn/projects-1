@@ -34,12 +34,22 @@
                     <br>         
                     <input type="password" placeholder="Password" name="password" class="input-area" required="true"/>
                 </div>
-                {% if messages != "Successfully Login"%}
+                {% if messages != "Successfully Login" or messages != "Successfully Done..."%}
                     <ul class="messages">
                     {% for message in messages %}
                         <li style="color: red; position: relative; left: 20%; margin-bottom: 5px;" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
                     {% endfor %}
                     </ul>
+                {% endif %}
+                {% if messages == "Successfully Done..." %}
+                    {% for message in messages %}
+                        {% if message.tags %}  
+                            <script>
+                                var str = "{{ message }}";
+                                alert(str)
+                            </script> 
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
                 <a class="forget-id-pass" href="#">Forget Id and Password</a>
                 <br>
@@ -48,17 +58,17 @@
             <!-- <img id="logo" src="../static/images/geuImage.jpeg" alt="something went wrong"/> -->
         </div>
     </div>
-    <footer class="page-footer font-small stylish-color-dark pt-4" style="background-color:  #4b4a49; color: #fff;">
+    <footer class="page-footer font-small stylish-color-dark pt-4" style=" background-color:  #4b4a49; color: #fff;">
         <footer class="page-footer font-small mdb-color lighten-3 pt-4" >
             <div class="container text-center text-md-left"style="background-color:  #4b4a49; color:#fff ">
                 <div class="row">
                 <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-                  <h5 class="font-weight-bold text-uppercase mb-4">Graphic Era </h5>
+                  <h5 class="font-weight-bold text-uppercase mb-4" style="overflow: hidden;">Graphic Era </h5>
                   <p>Established vide Act No 12 of 2011 of Uttarakhand State Legislature
                      University under Section 2(f) of the UGC Act, 1956 set up under the aegis of Graphic Era Educational Society, Dehradun.</p>
                   </div>
                 <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-                  <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+                  <h5 class="font-weight-bold text-uppercase mb-4" style="overflow: hidden;">Address</h5>
                   <ul class="list-unstyled">
                     <li>
                       <p>
@@ -66,7 +76,7 @@
                     </li>
                     <li>
                       <p>
-                        <i class="fas fa-envelope mr-3"></i> gehu@gmail.com</p>
+                        <i class="fas fa-envelope mr-3"></i> geu@gmail.com</p>
                     </li>
                     <li>
                       <p>
@@ -79,8 +89,8 @@
                   </ul>
                 </div>
         </footer>
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://www.gehu.ac.in/"> Graphic Era Hill University(GEHU)</a>
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+            <a href="https://www.geu.ac.in/"> Graphic Era University(GEU)</a>
         </div>
     </footer>
 </body>

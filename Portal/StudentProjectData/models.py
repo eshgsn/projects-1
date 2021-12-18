@@ -1,15 +1,14 @@
 from django.db import models
-
 # Create your models here.
 class StudentProjectModel(models.Model):
     name = models.CharField(
         max_length=30,blank=False,null=False
     )
     studentId = models.CharField(
-        max_length=15, blank=False, null=False
+        max_length=15, blank=False, null=False,primary_key = True
     )
 
-    Topic_list = [
+    topic_list = [
     ('Question Answering System for Machine Intelligent','Question Answering System for Machine Intelligent'),
     ('Building a Quantum Classifier using Quantum Computing','Building a Quantum Classifier using Quantum Computing'),
     ('Influence Maximization in Social Networks','Influence Maximization in Social Networks'),
@@ -54,9 +53,18 @@ class StudentProjectModel(models.Model):
 
     projectChoose = models.CharField(
         max_length=150,blank=False,null=False,
-        choices=Topic_list
+        choices=topic_list
     )
 
+    # gender_choices = [
+    #     ('male', "Male"),
+    #     ("female", "Female"),
+    # ]
+    # gender = models.CharField(
+    #     max_length=6, blank=False, null=False,
+    #     choices=gender_choices,
+    # )
     def __str__(self):
-        return self.username
+        return self.name
+
 

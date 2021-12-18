@@ -9,10 +9,10 @@ class StudentProjectForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
             'studentId': forms.TextInput(attrs={'class': 'form-control', 'required': 'True','autocomplete':"off"}),
-            'project' : forms.Select(attrs={'class':'form-control','required':'True','autocomplete':"off"})
+            'projectChoose' : forms.Select(attrs={'class':'form-control','required':'True','autocomplete':"off"})
         }
         labels = {
             'name': 'Student Name:',
             'studentId': 'Student Id:',
-            'project' : 'Mini Project Topics'
+            'projectChoose' : 'Mini Project Topics'
         }

@@ -22,12 +22,12 @@
             </ul>
     </div>
     <div style="margin:50px">
-        <form method="post" action="submitData">
+        <form method="post" action="OnClickProjectSubmittion">
             {% csrf_token %}
             <header style="font-size: 30px; font-weight: bold;">Student Login</header>
             {{ form }}
             <br>
-            <input type="submit" style="margin:50px" id="login-btn2" name="Login" value="Login"/>
+            <input type="submit" style="margin:50px" id="login-btn2" name="Login" value="submit"/>
         </form>
         {% if messages %}
             {% for message in messages %}
@@ -45,12 +45,12 @@
                 <div class="container text-center text-md-left"style="background-color:  #4b4a49; color:#fff">
                     <div class="row">
                     <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-                      <h5 class="font-weight-bold text-uppercase mb-4">Graphic Era </h5>
+                      <h5 class="font-weight-bold text-uppercase mb-4" style="overflow: hidden;">Graphic Era </h5>
                       <p>Established vide Act No 12 of 2011 of Uttarakhand State Legislature
                          University under Section 2(f) of the UGC Act, 1956 set up under the aegis of Graphic Era Educational Society, Dehradun.</p>
                       </div>
                     <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-                      <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+                      <h5 class="font-weight-bold text-uppercase mb-4" style="overflow: hidden;">Address</h5>
                       <ul class="list-unstyled">
                         <li>
                           <p>
@@ -58,7 +58,7 @@
                         </li>
                         <li>
                           <p>
-                            <i class="fas fa-envelope mr-3"></i> gehu@gmail.com</p>
+                            <i class="fas fa-envelope mr-3"></i> geu@gmail.com</p>
                         </li>
                         <li>
                           <p>
@@ -71,8 +71,8 @@
                       </ul>
                     </div>
             </footer>
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="https://www.gehu.ac.in/"> Graphic Era Hill University(GEHU)</a>
+            <div class="footer-copyright text-center py-3">© 2021 Copyright:
+                <a href="https://www.geu.ac.in/"> Graphic Era University(GEU)</a>
             </div>
         </footer>
     </body>

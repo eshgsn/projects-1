@@ -41,10 +41,11 @@
 #form-div{
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 25%;
     transform: translate(-50%,-50%);
-    width: 50vw;
-    height: 50vh;
+    backdrop-filter: blur(20px);
+    width: 35vw;
+    height: 55vh;
     border: 1px solid black;
     border-radius: 15px;
     box-shadow: 9px 7px 7px black;
@@ -52,6 +53,7 @@
 .form-header{
     font-size: 30px;
     margin-top: 4%;
+    font-weight: bold;
     margin-left: 4%;
 }
 .discription-para{
@@ -67,7 +69,8 @@
     margin-top: 1%;
     margin-bottom: 3%;
     font-size: 16px;
-    width: 15vw;
+    width: 25vw;
+    border-radius: 20px;
     padding: 5px;
 }
 .forget-id-pass{
@@ -79,7 +82,7 @@
 #login-btn{
     margin-top: 6%;
     position: relative;
-    left: 45%;
+    left: 35%;
     color: white;
     border-radius: 15px;
     background-color: blueviolet;
@@ -94,4 +97,18 @@
     width: 250px;
     height: 250px;
     margin: 50px;
+}
+
+#login-btn2{
+    margin-top: 6%;
+    color: aliceblue;
+    position: relative;
+    left: 35%;
+    background-color: blueviolet;
+    font-size: 18px;
+    border-radius : 18px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
